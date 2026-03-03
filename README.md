@@ -7,22 +7,6 @@
 
 A multi-stage ranking pipeline that improves over traditional ATS keyword matching by using **SBERT semantic embeddings** and a **supervised neural refinement layer** to produce **probability-based resume ↔ job alignment**.
 
----
-
-## Table of contents
-- [Problem](#problem)
-- [What this repo does](#what-this-repo-does)
-- [Data](#data)
-- [Method](#method)
-- [Results](#results)
-- [How to run](#how-to-run)
-- [Repo structure](#repo-structure)
-- [Limitations & responsible use](#limitations--responsible-use)
-- [Team](#team)
-- [References](#references)
-
----
-
 ## Problem
 Hiring pipelines frequently screen **hundreds of resumes per role**, and keyword-based ATS systems can miss strong candidates due to vocabulary mismatch (e.g., “information assurance” vs “cybersecurity”).
 
