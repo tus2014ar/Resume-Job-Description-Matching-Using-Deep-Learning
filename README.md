@@ -69,16 +69,16 @@ Focused on IT to keep domain consistent and evaluation realistic:
 ### Pipeline overview
 ```mermaid
 flowchart LR
-  A[Resume Text] --> P1[Preprocess\n(strip HTML, normalize)]
+  A[Resume Text] --> P1["Preprocess<br/>strip HTML<br/>normalize"]
   B[Job Description Text] --> P1
 
-  P1 --> T1[TF-IDF\n(5k features)]
-  P1 --> S1[SBERT\nall-MiniLM-L6-v2\n384-d embeddings]
+  P1 --> T1["TF-IDF<br/>5k features"]
+  P1 --> S1["SBERT<br/>all-MiniLM-L6-v2<br/>384-d embeddings"]
 
-  T1 --> R1[Cosine Similarity\nBaseline Rank]
-  S1 --> R2[Cosine Similarity\nSemantic Rank]
+  T1 --> R1["Cosine Similarity<br/>Baseline Rank"]
+  S1 --> R2["Cosine Similarity<br/>Semantic Rank"]
 
-  R2 --> L1[Pseudo-Labels\nTop-3 = 1\nBottom-3 = 0]
-  L1 --> N1[Neural Refinement MLP\n768-d input = concat(384+384)]
-  N1 --> O1[Match Probability]
-  O1 --> Final[Refined Ranking]
+  R2 --> L1["Pseudo-Labels<br/>Top-3 = 1<br/>Bottom-3 = 0"]
+  L1 --> N1["Neural Refinement (MLP)<br/>768-d = concat(384+384)"]
+  N1 --> O1["Match Probability<br/>0 to 1"]
+  O1 --> Final["Refined Ranking"]
