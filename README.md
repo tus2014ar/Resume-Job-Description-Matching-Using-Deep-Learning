@@ -16,7 +16,6 @@ Hiring pipelines frequently screen **hundreds of resumes per role**, and keyword
 - refines ranking with supervised learning,
 - reduces manual screening effort.
 
----
 
 ## What this repo does
 This project implements a **3-stage matching system**:
@@ -34,7 +33,7 @@ This project implements a **3-stage matching system**:
    - transforms similarity ranking into a binary classification task  
    - outputs a calibrated **match probability** (0–1)
 
----
+
 
 ## Data
 Focused on IT to keep domain consistent and evaluation realistic:
@@ -46,7 +45,6 @@ Focused on IT to keep domain consistent and evaluation realistic:
 > Dataset filenames used by the notebook:  
 `/Resume/Resume.csv` and `/JobDescription/job_title_des.csv`
 
----
 
 ## Method
 
